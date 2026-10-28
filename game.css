@@ -1,0 +1,42 @@
+#gameRoom{position:absolute;inset:0;z-index:0}#gameRoom img{position:absolute;pointer-events:none}#gameRoom button{position:absolute;background:transparent;border:0;padding:0;z-index:2}#gameRoom button:focus-visible{outline:4px dashed #ffe6b9}#dialogue{z-index:7}#portraits{position:absolute;inset:0;z-index:8;pointer-events:none}#dialogueHit{z-index:9}#next{z-index:10}#bagButton{position:absolute;left:1533px;top:9px;width:183px;height:202px;z-index:19;border:0;background:none;padding:0}#bagButton img{width:100%;height:100%;object-fit:contain}#held{position:absolute;left:1410px;top:58px;width:110px;height:110px;border:3px solid #ffe4aa;border-radius:20px;background:#482d29dc;z-index:19;padding:10px}#held img{width:100%;height:100%;object-fit:contain}#inventory{position:absolute;inset:0;z-index:25;background:#1b12136b}#inventory .ui-art{position:absolute;pointer-events:none}#inventory button.slot{position:absolute;top:434px;width:220px;height:215px;border:0;background:transparent;padding:25px}#inventory button.slot img{width:100%;height:100%;object-fit:contain}#inventory button.slot.selected{filter:drop-shadow(0 0 8px #ffe2a6)}#bagClose{position:absolute;left:1463px;top:240px;width:122px;height:112px;background:none;border:0;padding:0}#bagClose img{width:100%;height:100%}#toast{position:absolute;left:660px;top:200px;width:600px;text-align:center;z-index:17;background:#412724ed;border-radius:24px;padding:24px;color:#ffe7c4;font-size:32px;pointer-events:none}#toast img{display:block;max-width:150px;max-height:150px;margin:0 auto 10px}#clue{position:absolute;inset:0;z-index:6;background:#241916a8}#clue img{position:absolute;left:568px;top:130px;width:784px;height:820px}#success{position:absolute;inset:0;z-index:30;background:#2f211e}#success img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}#success button{position:absolute;bottom:35px;right:50px;background:#ed692a;color:#fff2d8;border:0;border-radius:15px;padding:15px 30px;font-size:28px}#keyReveal{position:absolute;inset:0;z-index:28;background:#32201bbf}#keyReveal img{position:absolute;object-fit:contain}#keyReveal button{position:absolute;bottom:90px;left:760px;width:400px;font-size:36px;background:#ed692a;color:#fff2d8;border:0;border-radius:20px;padding:20px}
+
+#bagButton img,#bagClose img,#held img,#inventory button.slot img{position:static!important;width:100%!important;height:100%!important}#toast img{position:static!important}
+
+/* Selected item: 91px wide, with the same 69px gap as bag-to-language. */
+#held{left:1373px;top:78px;width:91px;height:90px;border:0;border-radius:0;background:transparent;padding:0}
+#toast{background:rgba(233,99,34,.82)}
+html,body,body *{cursor:pointer!important}
+.room-snapshot{position:absolute;inset:0;z-index:1;pointer-events:none}
+.room-snapshot img{position:absolute;pointer-events:none}
+#keyReveal .key-rays{animation:ray-switch .7s steps(1,end) infinite}
+#keyReveal .rays-1{animation-delay:-.35s}
+#keyReveal .key-floating{animation:key-float 1.05s ease-in-out infinite}
+@keyframes ray-switch{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes key-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-46px)}}
+
+#held{left:1327.5px;width:136.5px;height:135px;top:55.5px}
+.extra-modal{position:absolute;inset:0;z-index:27}
+.extra-modal>img{position:absolute;pointer-events:none}
+.art-button{position:absolute;padding:0;border:0;background:transparent;color:#ffe8c6;font:700 36px Marker,sans-serif;transform-origin:center}
+.art-button img{pointer-events:none}.art-button span{position:relative;z-index:1;white-space:nowrap}
+.password-digit{position:absolute;top:440px;width:162px;height:226px;border:0;background:transparent;color:#ffe8c6;font:700 125px Marker,sans-serif}
+.modal-close{position:absolute;left:1515px;top:150px;width:85px;height:85px;border:0;border-radius:50%;background:#e86325;color:#ffe8c6;font:50px sans-serif}
+
+#success{overflow:hidden}
+#success .ending-characters{transform-origin:center bottom;animation:ending-breathe 1.4s ease-in-out infinite}
+#success .ending-symbols{animation:ending-flash .8s steps(1,end) infinite}
+#success .ending-stars{animation:ending-stars .6s steps(1,end) infinite}
+#success .ending-candy{animation:ending-candy 1.6s ease-in-out infinite}
+#success .ending-number{animation:ending-hop .4s ease-in-out infinite}
+@keyframes ending-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+@keyframes ending-flash{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes ending-stars{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes ending-candy{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes ending-hop{0%,80%,100%{transform:translateY(0)}35%{transform:translateY(-12px)}}
+
+/* UI labels follow the selected language, including modal buttons and digits. */
+.art-button,.password-digit{font-family:inherit}
+.art-button span{display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:8px 24px;white-space:normal;line-height:1.25}
+body[data-lang="en"] .art-button{font-size:30px}
+#keyReveal button{left:660px;width:600px;font-weight:700}
+#toast{font-weight:700}
